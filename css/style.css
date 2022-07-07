@@ -1,0 +1,21 @@
+body {
+  font-family: "Special Elite", cursive;
+  height: 100%;
+  width: 100%;
+  color: #000;
+  background-color: rgb(228, 228, 228);
+}
+.box {
+  max-width: 700px;
+  max-height: 800px;
+  margin: 0 auto;
+  background-image: url(../images/paper2.jpg);
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 20px;
+}
+.form-section {
+  margin-top: 70px;
+  text-align: end;
+}
