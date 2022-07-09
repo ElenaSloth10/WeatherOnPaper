@@ -59,6 +59,10 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  margin-bottom: 0px;
+}
+
 .indicators {
   font-size: 25px;
   margin-top: 30px;
