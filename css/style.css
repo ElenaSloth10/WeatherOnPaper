@@ -27,16 +27,14 @@ input[type="submit"],
 button {
   background-color: rgb(66, 65, 64);
   color: rgb(228, 228, 228);
-  font-size: 20px;
+  font-size: 15px;
   border: 2px solid #000;
-  /* border-radius: 5px; */
 }
 input[type="text"] {
   color: #000;
   background-color: rgb(228, 228, 228);
-  font-size: 20px;
+  font-size: 15px;
   border: 1px solid #000;
-  /* border-radius: 5px; */
 }
 
 .wether-section {
@@ -48,7 +46,12 @@ input[type="text"] {
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 60px;
+}
+
+.scale {
+  font-size: 30px;
+  margin-left: 10px;
 }
 
 h2 {
@@ -63,4 +66,44 @@ h2 {
 
 .sky {
   text-align: right;
+}
+
+@media screen and (max-width: 850px) {
+  h1 {
+    font-size: 50px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  .indicators {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 460px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .scale {
+    font-size: 20px;
+  }
+  .basicBlock {
+    min-width: 180px;
+  }
+  .basicBlock2 {
+    min-width: 130px;
+  }
+  input[type="submit"],
+  button {
+    margin-top: 5px;
+  }
+  .wether-section {
+    margin: 50px 0px 30px 0px;
+  }
 }
