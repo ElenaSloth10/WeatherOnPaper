@@ -15,6 +15,9 @@ body {
   background-size: cover;
   padding: 20px 40px;
 }
+.open {
+  text-align: center;
+}
 .form-section {
   margin-top: 30px;
   text-align: left;
@@ -22,18 +25,18 @@ body {
 
 input[type="submit"],
 button {
-  background-color: rgb(46, 44, 42);
+  background-color: rgb(66, 65, 64);
   color: rgb(228, 228, 228);
   font-size: 20px;
   border: 2px solid #000;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 input[type="text"] {
   color: #000;
   background-color: rgb(228, 228, 228);
   font-size: 20px;
   border: 1px solid #000;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .wether-section {
