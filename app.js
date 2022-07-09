@@ -45,8 +45,20 @@ function showTemt(response) {
   skyIconIndicator.setAttribute("alt", response.data.weather[0].description);
 }
 
-let city = "Washington";
-let apiKey = "905addfdd47350a84b1fff2eb7da7fbb";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=`;
+function search(city) {
+  let apiKey = "905addfdd47350a84b1fff2eb7da7fbb";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=`;
 
-axios.get(`${apiUrl}${apiKey}&&units=metric`).then(showTemt);
+  axios.get(`${apiUrl}${apiKey}&&units=metric`).then(showTemt);
+}
+
+function submitIndicator(event) {
+  event.preventDefault();
+  let cityChekIndicator = document.querySelector("#cityChek");
+  search(cityChekIndicator.value);
+}
+
+search("London");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", submitIndicator);
