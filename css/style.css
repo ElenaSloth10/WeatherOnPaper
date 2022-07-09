@@ -68,6 +68,11 @@ h2 {
   text-align: right;
 }
 
+#weatherSky {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
 @media screen and (max-width: 850px) {
   h1 {
     font-size: 50px;
