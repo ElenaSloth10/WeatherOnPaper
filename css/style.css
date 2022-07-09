@@ -80,6 +80,16 @@ h3 {
 #skyIcon {
   width: 70px;
 }
+a,
+a:hover,
+a:link {
+  color: rgb(80, 77, 77);
+  text-decoration: none;
+}
+.active {
+  color: #000 !important;
+}
+
 @media screen and (max-width: 850px) {
   h1 {
     font-size: 50px;

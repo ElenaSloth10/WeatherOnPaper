@@ -35,6 +35,7 @@ function showTemt(response) {
   let windIndicator = document.querySelector("#wind");
   windIndicator.innerHTML = Math.round(response.data.wind.speed);
   let dateIndicator = document.querySelector("h3");
+
   dateIndicator.innerHTML = formatDate(response.data.dt * 1000);
 
   let skyIconIndicator = document.querySelector("#skyIcon");
@@ -43,6 +44,8 @@ function showTemt(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   skyIconIndicator.setAttribute("alt", response.data.weather[0].description);
+
+  celsiusTemp = response.data.main.temp;
 }
 
 function search(city) {
@@ -58,7 +61,32 @@ function submitIndicator(event) {
   search(cityChekIndicator.value);
 }
 
-search("London");
+function showCelsius(event) {
+  event.preventDefault();
+  celsiusIndicator.classList.add("active");
+  fahrenheitIndicator.classList.remove("active");
+  let temperatureIndicator = document.querySelector("#temperature");
+  temperatureIndicator.innerHTML = Math.round(celsiusTemp);
+}
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  celsiusIndicator.classList.remove("active");
+  fahrenheitIndicator.classList.add("active");
+  let fahrenheitTemp = Math.round((celsiusTemp * 9) / 5 + 32);
+  let temperatureIndicator = document.querySelector("#temperature");
+  temperatureIndicator.innerHTML = fahrenheitTemp;
+}
+
+let celsiusTemp = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submitIndicator);
+
+let celsiusIndicator = document.querySelector("#celsius");
+celsiusIndicator.addEventListener("click", showCelsius);
+
+let fahrenheitIndicator = document.querySelector("#fahrenheit");
+fahrenheitIndicator.addEventListener("click", showFahrenheit);
+
+search("London");
