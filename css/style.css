@@ -7,7 +7,7 @@ body {
 }
 .box {
   max-width: 900px;
-  max-height: 800px;
+  max-height: 850px;
   margin: 0 auto;
   background-image: url(../images/paper2.jpg);
   background-position: center;
@@ -70,9 +70,12 @@ h2 {
 
 #weatherSky {
   font-size: 20px;
-  text-transform: uppercase;
+  position: relative;
+  top: 40%;
 }
-
+#skyIcon {
+  width: 70px;
+}
 @media screen and (max-width: 850px) {
   h1 {
     font-size: 50px;
@@ -85,7 +88,7 @@ h2 {
     margin-top: 10px;
   }
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 550px) {
   h1 {
     font-size: 30px;
   }
@@ -110,5 +113,8 @@ h2 {
   }
   .wether-section {
     margin: 50px 0px 30px 0px;
+  }
+  #weatherSky {
+    text-align: center;
   }
 }
