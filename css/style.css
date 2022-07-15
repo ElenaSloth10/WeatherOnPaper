@@ -6,7 +6,7 @@ body {
   background-color: rgb(228, 228, 228);
 }
 .box {
-  max-width: 900px;
+  max-width: 950px;
   max-height: 850px;
   margin: 0 auto;
   background-image: url(../images/paper2.jpg);
@@ -29,16 +29,18 @@ button {
   color: rgb(228, 228, 228);
   font-size: 15px;
   border: 2px solid #000;
+  border-radius: 2px;
 }
 input[type="text"] {
   color: #000;
   background-color: rgb(228, 228, 228);
   font-size: 15px;
   border: 1px solid #000;
+  border-radius: 2px;
 }
 
 .wether-section {
-  margin: 80px 0px 50px 0px;
+  margin: 60px 0px 50px 0px;
 }
 
 .forecastDay {
@@ -95,6 +97,11 @@ a:link {
   font-size: 20px;
 }
 
+.stamp {
+  width: 80px;
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 850px) {
   h1 {
     font-size: 50px;
@@ -135,5 +142,8 @@ a:link {
   }
   #weatherSky {
     text-align: center;
+  }
+  .stamp {
+    display: none;
   }
 }

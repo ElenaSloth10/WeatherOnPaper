@@ -70,7 +70,6 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinats) {
-  console.log(coordinats);
   let apiKey = "905addfdd47350a84b1fff2eb7da7fbb";
   let apiUrlC = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinats.lat}&lon=${coordinats.lon}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrlC).then(displayForecast);
@@ -121,7 +120,7 @@ function showCelsius(event) {
   units = "metric";
   celsiusIndicator.classList.add("active");
   fahrenheitIndicator.classList.remove("active");
-  search(citySearch);
+  search(document.querySelector("h1").textContent);
 }
 
 function showFahrenheit(event) {
@@ -129,7 +128,7 @@ function showFahrenheit(event) {
   units = "imperial";
   celsiusIndicator.classList.remove("active");
   fahrenheitIndicator.classList.add("active");
-  search(citySearch);
+  search(document.querySelector("h1").textContent);
 }
 
 let celsiusTemp = null;
@@ -164,6 +163,5 @@ let button = document.querySelector("button");
 button.addEventListener("click", buttonClick);
 
 let units = "metric";
-let citySearch = "London";
 
-search("London");
+search("Porto");
