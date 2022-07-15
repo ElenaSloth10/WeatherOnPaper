@@ -91,6 +91,10 @@ a:link {
   color: #000 !important;
 }
 
+.days-temp-all {
+  font-size: 20px;
+}
+
 @media screen and (max-width: 850px) {
   h1 {
     font-size: 50px;
